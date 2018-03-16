@@ -1,6 +1,6 @@
 {
   "name": "hubot-stride",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Hubot adapter for Atlassian Stride",
   "main": "lib/web.js",
   "directories": {
@@ -11,11 +11,11 @@
     "test": "coffee -c node_modules/hubot && NODE_ENV=testing jest -i",
     "test:coverage": "coffee -c node_modules/hubot && NODE_ENV=testing jest -i --coverage",
     "test:watch": "coffee -c node_modules/hubot && NODE_ENV=testing jest -i --watch",
-    "test:ci": "coffee -c node_modules/hubot && NODE_ENV=testing jest --coverage --testResultsProcessor='jest-junit' -i --forceExit"
+    "test:ci": "coffee -c node_modules/hubot && NODE_ENV=testing jest --coverage --testResultsProcessor='jest-junit' -i --forceExit && codecov"
   },
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@bitbucket.org/atlassian/hubot-stride.git"
+    "url": "http://github.com/atlassian/hubot-stride.git"
   },
   "keywords": [
     "hubot",
@@ -24,7 +24,7 @@
   ],
   "author": "",
   "license": "MIT",
-  "homepage": "https://bitbucket.org/atlassian/hubot-stride#readme",
+  "homepage": "https://github.com/atlassian/hubot-stride#readme",
   "peerDependencies": {
     "hubot": ">=2.0"
   },
