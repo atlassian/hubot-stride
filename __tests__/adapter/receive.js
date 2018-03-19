@@ -29,7 +29,7 @@ test('Adapter can receive messages', async () => {
     id: data.message.id,
     text: data.message.text,
     user: {
-      senderId: data.sender.id
+      id: data.sender.id
     }
   })
   expect(res.status).toEqual(200)

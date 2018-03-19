@@ -14,6 +14,15 @@ function sendMessage (onReply, {
     .reply(201, onReply())
 }
 
+function sendMessage400 (onReply, {
+  cloudId = defaultCloudId,
+  conversationId = defaultConversationId
+} = {}) {
+  return nock(apiUrl)
+    .post(`/site/${cloudId}/conversation/${conversationId}/message`)
+    .reply(400, onReply())
+}
+
 function getToken (onReply) {
   return nock('https://auth.atlassian.com')
     .post('/oauth/token')
@@ -42,6 +51,7 @@ function uploadFile (onReply, {
 module.exports = {
   getToken,
   sendMessage,
+  sendMessage400,
   uploadFile,
   defaultCloudId,
   defaultConversationId

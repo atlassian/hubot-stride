@@ -6,7 +6,11 @@ class FakeRobot extends EventEmitter {
     this.logger = console
     this.receive = jest.fn()
     this.brain = {
-      userForId: jest.fn(senderId => ({ senderId }))
+      userForId: jest.fn((id, options) => {
+        return Object.assign({
+          id: id
+        }, options)
+      })
     }
   }
 }
