@@ -2,6 +2,8 @@
 [Hubot](https://hubot.github.com/) adapter for [Atlassian Stride](https://www.stride.com/)
 
 [![npm (scoped)](https://img.shields.io/npm/v/hubot-stride.svg?maxAge=2592000)](https://www.npmjs.com/package/hubot-stride)
+[![Build Status](https://travis-ci.org/atlassian/hubot-stride.svg?branch=master)](https://travis-ci.org/atlassian/hubot-stride)
+[![codecov](https://codecov.io/gh/atlassian/hubot-stride/branch/master/graph/badge.svg)](https://codecov.io/gh/atlassian/hubot-stride)
 ## Prerequisites
 You need to install:
 
