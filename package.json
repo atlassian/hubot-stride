@@ -11,7 +11,8 @@
     "test": "coffee -c node_modules/hubot && NODE_ENV=testing jest -i",
     "test:coverage": "coffee -c node_modules/hubot && NODE_ENV=testing jest -i --coverage",
     "test:watch": "coffee -c node_modules/hubot && NODE_ENV=testing jest -i --watch",
-    "test:ci": "coffee -c node_modules/hubot && NODE_ENV=testing jest --coverage --testResultsProcessor='jest-junit' -i --forceExit && codecov"
+    "test:ci": "coffee -c node_modules/hubot && NODE_ENV=testing jest --coverage --testResultsProcessor='jest-junit' -i --forceExit",
+    "test:upload": "codecov"
   },
   "repository": {
     "type": "git",
