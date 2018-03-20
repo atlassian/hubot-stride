@@ -1,6 +1,6 @@
 {
   "name": "hubot-stride",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "Hubot adapter for Atlassian Stride",
   "main": "lib/web.js",
   "directories": {
@@ -55,7 +55,8 @@
     "jsonwebtoken": "^8.1.1",
     "lodash": "^4.17.5",
     "node-fetch": "^2.0.0",
-    "require-directory": "^2.1.1"
+    "require-directory": "^2.1.1",
+    "twitter-text": "^2.0.4"
   },
   "jest": {
     "testPathIgnorePatterns": [
