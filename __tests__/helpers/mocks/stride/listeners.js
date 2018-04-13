@@ -14,6 +14,24 @@ function sendMessage (onReply, {
     .reply(201, onReply())
 }
 
+function sendMessageMarkdown (onReply, {
+  cloudId = defaultCloudId,
+  conversationId = defaultConversationId
+} = {}) {
+  return nock(apiUrl)
+    .post(`/site/${cloudId}/conversation/${conversationId}/message`)
+    .reply(201, onReply())
+}
+
+function sendMessageMarkdown400 (onReply, {
+  cloudId = defaultCloudId,
+  conversationId = defaultConversationId
+} = {}) {
+  return nock(apiUrl)
+    .post(`/site/${cloudId}/conversation/${conversationId}/message`)
+    .reply(400, onReply())
+}
+
 function sendMessage400 (onReply, {
   cloudId = defaultCloudId,
   conversationId = defaultConversationId
@@ -52,6 +70,8 @@ module.exports = {
   getToken,
   sendMessage,
   sendMessage400,
+  sendMessageMarkdown,
+  sendMessageMarkdown400,
   uploadFile,
   defaultCloudId,
   defaultConversationId
