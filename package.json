@@ -1,6 +1,6 @@
 {
   "name": "hubot-stride",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "Hubot adapter for Atlassian Stride",
   "main": "lib/web.js",
   "directories": {

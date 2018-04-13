@@ -6,7 +6,7 @@ afterAll(() => context.end())
 
 test('Adapter.send sends message to Stride', async () => {
   const getTokenRequest = utils.waitForRequest(mocks.stride.listeners.getToken)
-  const sendMessageRequest = utils.waitForRequest(mocks.stride.listeners.sendMessage)
+  const sendMessageMarkdownRequest = utils.waitForRequest(mocks.stride.listeners.sendMessageMarkdown)
 
   context.app.adapter.send({
     room: {
@@ -16,18 +16,6 @@ test('Adapter.send sends message to Stride', async () => {
   }, 'test message')
 
   await getTokenRequest
-  const res = await sendMessageRequest
-  expect(res.body).toEqual({
-    'body': {
-      'content': [{
-        'content': [{
-          'text': 'test message',
-          'type': 'text'
-        }],
-        'type': 'paragraph'
-      }],
-      'type': 'doc',
-      'version': 1
-    }
-  })
+  const res = await sendMessageMarkdownRequest
+  expect(res.body).toEqual('test message')
 })
